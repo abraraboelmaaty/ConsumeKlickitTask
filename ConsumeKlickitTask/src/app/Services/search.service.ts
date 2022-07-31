@@ -5,15 +5,13 @@ import { Product } from '../models/product';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductServiceService {
+export class SearchService {
 
   constructor(private http:HttpClient) { }
-  private baseUrl:string = 'http://localhost:5266/api/product/';
+  private baseUrl:string = 'http://localhost:5266/api/search/';
   //private baseUrl:string = 'http://localhost:58428/api/product';//IIS Express
-  getAllProducts(){
-    return this.http.get<Product[]>(this.baseUrl);
-  }
-  getById(id:number){
-    return this.http.get<Product>(`${this.baseUrl}${id}`)
+
+  getAny(word:string){
+    return this.http.get<Product[]>(`${this.baseUrl}${word}`)
   }
 }

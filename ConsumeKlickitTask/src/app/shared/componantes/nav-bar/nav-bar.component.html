@@ -38,17 +38,12 @@
           </span>
           <input type="text" name="search" [(ngModel)]="searchText" class="form-control search-box"
             placeholder="Search for...">
-          <!-- <input type="text" class="form-control search-box" placeholder="Search for..."> -->
-          <!-- <div class="form-group">
-            <input type="text" class="form-control"name="search" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
-        </div> -->
+
 
         </div>
-        <!-- {{userForm.value|json}}
-        {{enterSearchValue}}
-        {{searchWord.valid}} -->
+
       </form>
-      <!-- <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search> -->
+
 
       <div class="d-flex ">
         <a *ngIf="!login()" [routerLink] = "['/login']" class="btn btn-default log-in"><i class="fa fa-sign-in"  aria-hidden="true"></i> Log in</a>

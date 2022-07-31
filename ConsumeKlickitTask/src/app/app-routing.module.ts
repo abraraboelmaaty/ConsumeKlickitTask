@@ -4,6 +4,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ProductDetailsComponent } from './products/components/product-details/product-details.component';
 import { HomeComponent } from './shared/componantes/home/home.component';
+import { SearchComponent } from './shared/componantes/search/search.component';
 
 const routes: Routes = [
   { path: 'index', component:HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path:"register/:id",component:RegisterComponent},
   {path:"details/:id",component:ProductDetailsComponent},
+  {path:'search/:id',component:SearchComponent},
   { path: '',   redirectTo: '/index', pathMatch: 'full' },
 ];
 
