@@ -1,0 +1,20 @@
+<div class="container px-4 px-lg-5 mt-5">
+  <!-- <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"> -->
+<div class="card mb-3 " style="max-width: 540px; ">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{this.imageSource}}{{showProduct.image}}" style="height: -webkit-fill-available;"  class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{showProduct.name}}</h5>
+        <p class="card-text">{{showProduct.description}}</p>
+        <p class="card-text"><small class="text-muted">{{showProduct.price}}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="btn btn-primary mb-3" (click)="back()">back to list</button>
+</div>
+
+<!-- </div> -->

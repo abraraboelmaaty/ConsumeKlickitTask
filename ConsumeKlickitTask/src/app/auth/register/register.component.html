@@ -1,0 +1,83 @@
+
+<div class="blue-container">
+  <div class="signup-form pt-5">
+    <form method="post" #userForm = "ngForm" novalidate (ngSubmit)="onSubmit()" class="shadow-lg">
+
+      <h2>Sign Up</h2>
+      <p>Please fill in this form to create an account!</p>
+      <hr>
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+          <input type="text" name="FirstName" placeholder = "FirstName" class="form-control"
+         required [(ngModel)]="user.FirstName" #registerFirstName="ngModel"
+          [class.is-invalid] = "registerFirstName.invalid && registerFirstName.touched">
+         <small class="text-danger" [class.d-none] = "registerFirstName.valid || registerFirstName.untouched">FirstName is required</small>
+        </div>
+
+        <div class="col">
+         <input type="text" name="LastName" placeholder = "LastName" class="form-control"
+         required [(ngModel)]="user.LastName" #registerLastName="ngModel"
+          [class.is-invalid] = "registerLastName.invalid && registerLastName.touched">
+         <small class="text-danger" [class.d-none] = "registerLastName.valid || registerLastName.untouched">LastName is required</small>
+        </div>
+        </div>
+        </div>
+        <div class="form-group">
+          <input type="text" name="UseName" placeholder = "UserName" class="form-control"
+          required [(ngModel)]="user.Username" #registerUseName="ngModel"
+          [class.is-invalid] = "registerUseName.invalid && registerUseName.touched">
+         <small class="text-danger" [class.d-none] = "registerUseName.valid || registerUseName.untouched">UserName is required</small>
+        </div>
+        <div class="form-group">
+        <input type="email" name="Email" placeholder = "Email" class="form-control"
+         required [(ngModel)]="user.Email" #registeremail="ngModel"
+          [class.is-invalid] = "registeremail.invalid && registeremail.touched">
+         <small class="text-danger" [class.d-none] = "registeremail.valid || registeremail.untouched">Email is required</small>
+      </div>
+      <div class="form-group">
+        <input type="password" name="Password" placeholder = "Password" class="form-control"
+        required [(ngModel)]="user.Password" #registerpassword="ngModel"
+        [class.is-invalid] = "registerpassword.invalid && registerpassword.touched">
+       <small class="text-danger" [class.d-none] = "registerpassword.valid || registerpassword.untouched">Password is required</small>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+          <input type="text" name="country" placeholder = "country" class="form-control"
+         required [(ngModel)]="user.country" #registerCountry="ngModel"
+          [class.is-invalid] = "registerCountry.invalid && registerCountry.touched">
+         <small class="text-danger" [class.d-none] = "registerCountry.valid || registerCountry.untouched">Country is required</small>
+        </div>
+
+        <div class="col">
+         <input type="text" name="governate" placeholder = "governate" class="form-control"
+         required [(ngModel)]="user.governate" #registerGovernate="ngModel"
+          [class.is-invalid] = "registerGovernate.invalid && registerGovernate.touched">
+         <small class="text-danger" [class.d-none] = "registerGovernate.valid || registerGovernate.untouched">Governate is required</small>
+        </div>
+        <div class="col">
+          <input type="text" name="city" placeholder = "city" class="form-control"
+          required [(ngModel)]="user.city" #registerCity="ngModel"
+           [class.is-invalid] = "registerCity.invalid && registerCity.touched">
+          <small class="text-danger" [class.d-none] = "registerCity.valid || registerCity.untouched">City is required</small>
+         </div>
+        </div>
+        </div>
+        <div class="form-group">
+          <input type="text" name="phoneNumber" placeholder = "phoneNumber" class="form-control"
+          required [(ngModel)]="user.phoneNumber" #registerPhoneNumber="ngModel"
+          [class.is-invalid] = "registerPhoneNumber.invalid && registerPhoneNumber.touched">
+         <small class="text-danger" [class.d-none] = "registerPhoneNumber.valid || registerPhoneNumber.untouched">PhoneNumber is required</small>
+        </div>
+      <div class="form-group">
+        <input type="submit" value="SignUp"  class="btn btn-primary btn-lg" [disabled]="userForm.form.invalid">
+      </div>
+
+      <div class="hint-text">Already have an account? <a [routerLink] = "['/login']">Login here</a></div>
+    </form>
+
+  </div>
+</div>
+
+

@@ -1,0 +1,18 @@
+.footer{
+  background-color: #000000;
+  height: 90px;
+  text-align: center;
+}
+
+.footer p{
+  color:#a5a0a0;
+  margin-top: 10px;
+  font-family: system-ui;
+  font-weight: 600;
+}
+span {
+  padding-right:30px;
+   color : #CCCCCC;
+   font-size: 20px ;
+    margin-top: 20px
+}
